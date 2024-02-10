@@ -43,7 +43,7 @@ app.use(cors())
 
 app.get("/", (req, res)=>{
     res.json({data: process.env.API_KEY})
-    
+
 })
 
 //Initialize a firebase application
@@ -93,7 +93,6 @@ app.post("/upload", upload.single("filename"), async (req, res) => {
     }
 });
 
-// app.use("/upload", uploadRouter);
 app.use("/home", Principal)
 app.use("/sobre", Sobre)
 app.use("/tema", Tema)
